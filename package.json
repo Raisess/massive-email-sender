@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/Raisess/massive-email-sender#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "nodemailer": "^6.5.0"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/node": "^14.14.31",
     "@types/nodemailer": "^6.4.0"
   }
