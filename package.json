@@ -1,0 +1,29 @@
+{
+  "name": "massive-email-sender",
+  "version": "1.0.0",
+  "description": "A massive email sender.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./dist",
+    "compile": "tsc -p ./tsconfig.json",
+    "clean": "rm -r ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raisess/massive-email-sender.git"
+  },
+  "author": "Raisess",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Raisess/massive-email-sender/issues"
+  },
+  "homepage": "https://github.com/Raisess/massive-email-sender#readme",
+  "dependencies": {
+    "nodemailer": "^6.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "@types/nodemailer": "^6.4.0"
+  }
+}
