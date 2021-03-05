@@ -23,15 +23,18 @@ export default class SMTPClient implements ISMTPClient {
 		this.debug = debug;
 	}
 
-	public async send(to: string, subject: string, content: string): Promise<void> {
+	public async send(to: string, subject: string, content: string, html: boolean = false): Promise<void> {
 		const res: any = await this.transporter.sendMail({
-			from:   this.auth.user,
-			to:     to.toLowerCase(),
-			text:   content,
-			subject
+			from:    this.auth.user,
+			to:      to.toLowerCase(),
+			subject: subject,
+
+			[html
+			 ? "html"
+			 : "text"]: content
 		});
 
-		if (this.debug) console.log("Sended a message to:", to, "| message id:", res.messageId);
+		if (this.debug) console.log("Sended a message to:", to, "| using html:", html, "| message id:", res.messageId);
 	}
 }
 
