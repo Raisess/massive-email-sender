@@ -13,10 +13,10 @@ export default class EmailListParser implements IEmailListParser {
 		return fs.readFileSync(this.emailListFile, { encoding: "utf-8" });
 	}
 
-	public getEmailList(): Array<[string, string]> {
+	public getEmailList(): Array<StringCouple> {
 		const list: Array<string> = this.getFileData().trim().split("\n");
 
-		let temp: Array<[string, string]> = [];
+		let temp: Array<StringCouple> = [];
 
 		for (let i: number = 0; i < list.length; i+=2) {
 			temp.push([list[i].split("-")[1].trim(), list[i + 1]]);
