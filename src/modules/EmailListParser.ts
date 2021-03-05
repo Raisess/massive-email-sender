@@ -19,7 +19,7 @@ export default class EmailListParser implements IEmailListParser {
 		let temp: Array<StringCouple> = [];
 
 		for (let i: number = 0; i < list.length; i+=2) {
-			temp.push([list[i].split("-")[1].trim(), list[i + 1]]);
+			temp.push([list[i].trim(), list[i + 1].trim()]);
 		}
 
 		return temp;
