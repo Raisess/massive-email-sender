@@ -3,9 +3,10 @@ import "dotenv/config";
 import SMTPClient from "./services/SMTPClient";
 import EmailListParser from "./modules/EmailListParser";
 
-const email: SMTPClient = new SMTPClient(true);
+const email:  SMTPClient      = new SMTPClient(true);
+const parser: EmailListParser = new EmailListParser(undefined, true);
 
-const emailList: Array<StringCouple> = new EmailListParser().getEmailList();
+const emailList: Array<StringCouple> = parser.getEmailList();
 
 for (const item of emailList) {
 	setTimeout((): void => {

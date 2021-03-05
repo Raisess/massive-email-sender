@@ -4,9 +4,11 @@ import { IEmailListParser } from "../interfaces/IEmailListParser";
 
 export default class EmailListParser implements IEmailListParser {
 	private emailListFile: string;
+	private debug:         boolean;
 
-	constructor(emailListFile: string = __dirname + "/../../email_list.txt") {
+	constructor(emailListFile: string = __dirname + "/../../email_list.txt", debug: boolean = false) {
 		this.emailListFile = emailListFile;
+		this.debug         = debug;
 	}
 
 	private getFileData(): string {
@@ -21,6 +23,8 @@ export default class EmailListParser implements IEmailListParser {
 		for (let i: number = 0; i < list.length; i+=2) {
 			temp.push([list[i].trim(), list[i + 1].trim()]);
 		}
+
+		if (this.debug) console.log(temp);
 
 		return temp;
 	}
