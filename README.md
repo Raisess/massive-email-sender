@@ -1,4 +1,4 @@
-# Ming
+# 📨 Ming
 
 A massive email sender tool.
 
