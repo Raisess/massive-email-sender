@@ -31,9 +31,9 @@ MESSAGE=
 HTML=
 ```
 
-### E-mails list
+### E-mail list
 
-You need to create a file called **email_list.text** on the project root.
+You need to create a file called **email_list.txt** on the project root.
 
 Using this model:
 
